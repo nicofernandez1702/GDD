@@ -332,6 +332,84 @@ CREATE TABLE APP_DELIVERY.ITEM_PRODUCTO(
 	TOTAL DECIMAL(18,2) NOT NULL
 );
 
+--------Drops procedures------------------------
+
+IF OBJECT_ID('APP_DELIVERY.Migrar_usuario', 'P') IS NOT NULL  
+  DROP PROCEDURE APP_DELIVERY.Migrar_usuario;
+GO
+IF OBJECT_ID('APP_DELIVERY.Migrar_tipo_paquete', 'P') IS NOT NULL  
+  DROP PROCEDURE APP_DELIVERY.Migrar_tipo_paquete;
+GO
+IF OBJECT_ID('APP_DELIVERY.Migrar_paquete', 'P') IS NOT NULL  
+  DROP PROCEDURE APP_DELIVERY.Migrar_paquete;
+GO
+IF OBJECT_ID('APP_DELIVERY.Migrar_seguro', 'P') IS NOT NULL  
+  DROP PROCEDURE APP_DELIVERY.Migrar_estado_pedido;
+GO
+IF OBJECT_ID('APP_DELIVERY.Migrar_estado_mensajeria', 'P') IS NOT NULL  
+  DROP PROCEDURE APP_DELIVERY.Migrar_estado_mensajeria;
+GO
+IF OBJECT_ID('APP_DELIVERY.Migrar_estado_pedido', 'P') IS NOT NULL  
+  DROP PROCEDURE APP_DELIVERY.Migrar_estado_pedido;
+GO
+IF OBJECT_ID('APP_DELIVERY.Migrar_estado_reclamo', 'P') IS NOT NULL  
+  DROP PROCEDURE APP_DELIVERY.Migrar_estado_reclamo;
+GO
+IF OBJECT_ID('APP_DELIVERY.Migrar_tipo_movilidad', 'P') IS NOT NULL  
+  DROP PROCEDURE APP_DELIVERY.Migrar_tipo_movilidad;
+GO
+IF OBJECT_ID('APP_DELIVERY.Migrar_tipo_medio_pago', 'P') IS NOT NULL  
+  DROP PROCEDURE APP_DELIVERY.Migrar_tipo_medio_pago;
+GO
+IF OBJECT_ID('APP_DELIVERY.Migrar_medio_pago', 'P') IS NOT NULL  
+  DROP PROCEDURE APP_DELIVERY.Migrar_medio_pago;
+GO
+IF OBJECT_ID('APP_DELIVERY.Migrar_marca_tarjeta', 'P') IS NOT NULL  
+  DROP PROCEDURE APP_DELIVERY.Migrar_marca_tarjeta;
+GO
+IF OBJECT_ID('APP_DELIVERY.Migrar_medio_pago', 'P') IS NOT NULL  
+  DROP PROCEDURE APP_DELIVERY.Migrar_medio_pago;
+GO
+IF OBJECT_ID('APP_DELIVERY.Migrar_producto', 'P') IS NOT NULL  
+  DROP PROCEDURE APP_DELIVERY.Migrar_producto;
+GO
+IF OBJECT_ID('APP_DELIVERY.Migrar_dia', 'P') IS NOT NULL  
+  DROP PROCEDURE APP_DELIVERY.Migrar_dia;
+GO
+IF OBJECT_ID('APP_DELIVERY.Migrar_tipo_reclamo', 'P') IS NOT NULL  
+  DROP PROCEDURE APP_DELIVERY.Migrar_tipo_reclamo;
+GO
+IF OBJECT_ID('APP_DELIVERY.Migrar_tipo_cupon', 'P') IS NOT NULL  
+  DROP PROCEDURE APP_DELIVERY.Migrar_tipo_cupon;
+GO
+IF OBJECT_ID('APP_DELIVERY.Migrar_cupon', 'P') IS NOT NULL  
+  DROP PROCEDURE APP_DELIVERY.Migrar_cupon;
+GO
+IF OBJECT_ID('APP_DELIVERY.Migrar_operador_reclamo', 'P') IS NOT NULL  
+  DROP PROCEDURE APP_DELIVERY.Migrar_operador_reclamo;
+GO
+IF OBJECT_ID('APP_DELIVERY.Migrar_repartidor', 'P') IS NOT NULL  
+  DROP PROCEDURE APP_DELIVERY.Migrar_repartidor;
+GO
+IF OBJECT_ID('APP_DELIVERY.Migrar_local', 'P') IS NOT NULL  
+  DROP PROCEDURE APP_DELIVERY.Migrar_local;
+GO
+IF OBJECT_ID('APP_DELIVERY.Migrar_producto_local', 'P') IS NOT NULL  
+  DROP PROCEDURE APP_DELIVERY.Migrar_producto_local;
+GO
+IF OBJECT_ID('APP_DELIVERY.Migrar_local_horario', 'P') IS NOT NULL  
+  DROP PROCEDURE APP_DELIVERY.Migrar_local_horario;
+GO
+IF OBJECT_ID('APP_DELIVERY.Migrar_reclamo', 'P') IS NOT NULL  
+  DROP PROCEDURE APP_DELIVERY.Migrar_reclamo;
+GO
+IF OBJECT_ID('APP_DELIVERY.Migrar_cupon_reclamo', 'P') IS NOT NULL  
+  DROP PROCEDURE APP_DELIVERY.Migrar_cupon_reclamo;
+GO
+IF OBJECT_ID('APP_DELIVERY.Migrar_item_producto', 'P') IS NOT NULL  
+  DROP PROCEDURE APP_DELIVERY.Migrar_item_producto;
+
+
 --Inserts
 
 CREATE PROCEDURE APP_DELIVERY.Migrar_usuario AS
@@ -626,28 +704,3 @@ EXECUTE APP_DELIVERY.Migrar_local_horario
 EXECUTE APP_DELIVERY.Migrar_reclamo
 EXECUTE APP_DELIVERY.Migrar_cupon_reclamo
 
---Drops procedures
-
-DROP PROCEDURE APP_DELIVERY.Migrar_usuario
-DROP PROCEDURE APP_DELIVERY.Migrar_tipo_paquete
-DROP PROCEDURE APP_DELIVERY.Migrar_paquete
-DROP PROCEDURE APP_DELIVERY.Migrar_seguro
-DROP PROCEDURE APP_DELIVERY.Migrar_estado_mensajeria
-DROP PROCEDURE APP_DELIVERY.Migrar_estado_pedido
-DROP PROCEDURE APP_DELIVERY.Migrar_estado_reclamo
-DROP PROCEDURE APP_DELIVERY.Migrar_tipo_movilidad 
-DROP PROCEDURE APP_DELIVERY.Migrar_tipo_medio_pago 
-DROP PROCEDURE APP_DELIVERY.Migrar_marca_tarjeta
-DROP PROCEDURE APP_DELIVERY.Migrar_medio_pago
-DROP PROCEDURE APP_DELIVERY.Migrar_producto
-DROP PROCEDURE APP_DELIVERY.Migrar_dia
-DROP PROCEDURE APP_DELIVERY.Migrar_tipo_reclamo
-DROP PROCEDURE APP_DELIVERY.Migrar_tipo_cupon
-DROP PROCEDURE APP_DELIVERY.Migrar_cupon
-DROP PROCEDURE APP_DELIVERY.Migrar_operador_reclamo
-DROP PROCEDURE APP_DELIVERY.Migrar_repartidor
-DROP PROCEDURE APP_DELIVERY.Migrar_local
-DROP PROCEDURE APP_DELIVERY.Migrar_producto_local
-DROP PROCEDURE APP_DELIVERY.Migrar_local_horario
-DROP PROCEDURE APP_DELIVERY.Migrar_reclamo
-DROP PROCEDURE APP_DELIVERY.Migrar_cupon_reclamo
